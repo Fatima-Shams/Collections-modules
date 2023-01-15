@@ -1,0 +1,104 @@
+#namedtuple
+
+from collections import namedtuple
+a=namedtuple('courses','name,technology')
+s=a('data science','python')
+print(s)
+
+
+s=a._make(['Ai','python'])
+print(s)
+
+
+#deque
+
+from collections import deque
+a=['e','d','u','r','e','k','a']
+d=deque(a)
+print(d)
+
+
+d.append('python')
+print(d)
+
+d.appendleft('python')
+print(d)
+
+d.pop()
+print(d)
+
+
+d.popleft()
+print(d)
+
+
+#chainmap
+
+from collections import ChainMap
+
+a={1:'edureka',2:'python'}
+b={3:'ML',2:'AI'}
+
+a1=ChainMap(a,b)
+print(a1)
+
+
+#counters
+
+from collections import Counter
+
+a=[1,2,1,2,3,4,5,4,3,5,2,1,1,6,8,4]
+c=Counter(a)
+print(c)
+
+
+print(list(c.elements()))
+
+
+print(c.most_common())
+
+
+
+sub={2:1,5:1}
+print(c.subtract(sub))
+print(c.most_common())
+
+
+from collections import OrderedDict
+
+d=OrderedDict()
+d[1]='e'
+d[2]='d'
+d[3]='u'
+d[4]='r'
+d[5]='e'
+d[6]='k'
+d[7]='a'
+
+print(d)
+
+
+print(d.keys())
+
+print(d.items())
+
+d[1]='p'
+print(d)
+
+
+#defaultdict
+
+from collections import defaultdict
+
+d=defaultdict(int)
+
+d[1]= 'python'
+d[2]= 'edureka'
+
+print(d['java'])
+
+
+
+
+
+
